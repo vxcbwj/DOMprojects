@@ -34,6 +34,8 @@ cards.forEach((card) => {
     if (quantity > 0) {
       quantitySpan.innerText = quantity - 1;
       updateTotal();
+    } else {
+      card.closest(".card-body").remove();
     }
   });
 
@@ -46,6 +48,5 @@ cards.forEach((card) => {
   // Heart (like) button
   heartBtn.addEventListener("click", () => {
     heartBtn.classList.toggle("liked");
-    // Optionally style this in CSS with a red color
   });
 });
